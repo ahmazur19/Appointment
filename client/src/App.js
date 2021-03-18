@@ -7,6 +7,9 @@ import NavBar from './components/NavBar';
 import About from './pages/About';
 import { PRIMARY_COLOR } from './styles';
 import ComponentDemo from './pages/ComponentDemo';
+import Patients from './components/Patients';
+import Doctors from './components/Doctors';
+import Appointments from './components/Appointments';
 
 function App() {
 
@@ -17,7 +20,9 @@ function App() {
     <Container>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/about' component={About} />
+        <Route exact path='/patient' component={Patients} />
+        <Route exact path='/doctor' component={Doctors} />
+        <Route exact path='/appointment' component={Appointments} />
         <Route exact path='/componentDemo' component={ComponentDemo} />
         
       </Switch>
