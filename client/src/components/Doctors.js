@@ -3,7 +3,7 @@ import useAxiosOnMount from '../hooks/useAxiosOnMount'
 import AxiosContainer from './AxiosContainer'
 import { Link } from 'react-router-dom'
 
-const Doctors = (props) => {
+const Doctors = () => {
   const {data, loading, error} = useAxiosOnMount('/doctors')
   
   return(
