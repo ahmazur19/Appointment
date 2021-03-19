@@ -3,11 +3,11 @@ import useAxiosOnMount from '../hooks/useAxiosOnMount'
 import AxiosContainer from './AxiosContainer'
 
 const Patients = (props) => {
-  const {data, loading, error} = useAxiosOnMount('/patients/')
+  const {data, loading, error} = useAxiosOnMount('/patients')
   
   return(
     <div>
-      <AxiosContainer>
+      <AxiosContainer loading={loading} error={error} loaderMessage={'Loading URL, please wait'}>
       <List name='Patients'
           data={data}
           renderData={(patient)=> { 
@@ -20,7 +20,7 @@ const Patients = (props) => {
         />
 
       </AxiosContainer>
-    <h1>Patients</h1>
+    
     </div>
   )
 }

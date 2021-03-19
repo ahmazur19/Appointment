@@ -2,6 +2,7 @@ import StringifyJson from "./JsonStringify"
 
 const List = (props)=>{
     const {name,  data, renderData} = props
+    
     return(
         <>
         <h1>{name}</h1>

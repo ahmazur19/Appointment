@@ -16,7 +16,6 @@ const useAxiosOnMount = (url) => {
          // this will break not 100%
          setData(res.data.data ? res.data.data : res.data)
          setLoading(false)
-         
          console.log(data)
        } catch(err){
            setError(err)

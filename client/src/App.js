@@ -24,6 +24,7 @@ function App() {
         <Route exact path='/doctor' component={Doctors} />
         <Route exact path='/appointment' component={Appointments} />
         <Route exact path='/componentDemo' component={ComponentDemo} />
+        <Route exact path='/doctors/:id' component={Doctor} />
         
       </Switch>
       </Container>
