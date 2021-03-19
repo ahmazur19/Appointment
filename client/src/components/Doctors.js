@@ -14,8 +14,9 @@ const Doctors = (props) => {
           renderData={(doctor)=> { 
           return(
             <div>
-              <Link to={'/doctors/:id'}>
+              <Link to={`/doctors/${doctor.id}`}>
             <p>{doctor.name}</p>
+            <p>{doctor.id}</p>
               </Link>
             </div>
             )} 

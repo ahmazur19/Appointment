@@ -10,7 +10,8 @@ class PatientsController < ApplicationController
 
   # GET /patients/1
   def show
-    render json: @patient
+    appointments = @patient.appointments
+    render json: {patient: @patient, appointments: appointments}
   end
 
   # POST /patients

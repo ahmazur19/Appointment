@@ -2,11 +2,10 @@ import { useParams } from "react-router-dom"
 import useAxiosOnMount from "../hooks/useAxiosOnMount"
 import AxiosContainer from "./AxiosContainer"
 import StringifyJson from "./JsonStringify"
-import List from "./List"
 
-const Doctor = () => {
+const Patient = () => {
     const {id} = useParams()
-    const {data, loading, error} = useAxiosOnMount(`/doctors/${id}`)
+    const {data, loading, error} = useAxiosOnMount(`/patients/${id}`)
    
   
     return(
@@ -20,4 +19,4 @@ const Doctor = () => {
     )
   }
 
-export default Doctor
+export default Patient

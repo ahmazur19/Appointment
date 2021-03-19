@@ -10,6 +10,8 @@ import ComponentDemo from './pages/ComponentDemo';
 import Patients from './components/Patients';
 import Doctors from './components/Doctors';
 import Appointments from './components/Appointments';
+import Doctor from './components/Doctor';
+import Patient from './components/Patient';
 
 function App() {
 
@@ -25,6 +27,7 @@ function App() {
         <Route exact path='/appointment' component={Appointments} />
         <Route exact path='/componentDemo' component={ComponentDemo} />
         <Route exact path='/doctors/:id' component={Doctor} />
+        <Route exact path='/patients/:id' component={Patient} />
         
       </Switch>
       </Container>

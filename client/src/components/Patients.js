@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import List from '../components/List'
 import useAxiosOnMount from '../hooks/useAxiosOnMount'
 import AxiosContainer from './AxiosContainer'
@@ -13,7 +14,9 @@ const Patients = (props) => {
           renderData={(patient)=> { 
           return(
             <div>
+              <Link to={`patients/${patient.id}`}>
             <p>{patient.name}</p>
+            </Link>
             </div>
             )} 
           }
