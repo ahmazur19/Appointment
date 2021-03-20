@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import useAxiosOnMount from "../hooks/useAxiosOnMount"
+import AppointmentsShow from "./AppointmentsShow"
 import AxiosContainer from "./AxiosContainer"
 import StringifyJson from "./JsonStringify"
 import List from "./List"
@@ -17,16 +18,11 @@ const Doctor = () => {
     //   };
 
       const renderAppointments = () => {
-          data.appointments.map(a => {
-              return(
-                  <div>
-                      {a.id}
-                  <p>{a.created_at}</p>
-                  </div>
-              )
-          })
-      }
-   
+          console.log(data.appointments[0].created_at)
+          const appointments = data.appointments
+          data.appointments.forEach(a => <AppointmentsShow {...appointments}/>)}
+          
+              
   
     return(
       <div>
@@ -36,12 +32,14 @@ const Doctor = () => {
            <div>
            <h1>{data.doctor.name}</h1>
            {renderAppointments()}
-           </div>}
+           {data.appointments.length}
+           
+           </div>
+           }
         <StringifyJson json={data} />
-        
+
         
         </AxiosContainer>
-        
       
       </div>
     )

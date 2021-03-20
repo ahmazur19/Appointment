@@ -11,13 +11,14 @@ class DoctorsController < ApplicationController
   # GET /doctors/1
   def show
     appointments = @doctor.appointments
+
     render json: {doctor: @doctor, appointments: appointments}
   end
 
   # POST /doctors
   def create
     @doctor = Doctor.new(doctor_params)
-
+ 
     if @doctor.save
       render json: @doctor, status: :created, location: @doctor
     else
